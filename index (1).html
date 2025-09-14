@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conveyor MVWS Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- HyperFormula (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/hyperformula/dist/hyperformula.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Water Demand and BOM Calculations for Conveyor MVWS System</h1>
+      <p class="subtitle">Interactive reproduction of the Excel workbook (inputs, calculations, and BOM).</p>
+    </header>
+
+    <main>
+      <section id="inputs" class="card">
+        <h2>A • Editable Inputs</h2>
+        <form id="inputs-form"></form>
+      </section>
+
+      <section id="advanced" class="card">
+        <h2>B • Advanced inputs (if applicable)</h2>
+        <div id="advanced-note" class="muted">Adjust only if required.</div>
+        <form id="advanced-form"></form>
+      </section>
+
+      <section id="results" class="card">
+        <h2>C • Calculation Results</h2>
+        <table id="results-table">
+          <thead><tr><th>Result</th><th>Value</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section id="bom" class="card">
+        <h2>D • Bill of Materials (BOM)</h2>
+        <table id="bom-table">
+          <thead><tr id="bom-header-row"></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <div class="muted">
+        <a href="data.json" target="_blank" rel="noopener">data.json</a> •
+        Generated from the original Excel file.
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
